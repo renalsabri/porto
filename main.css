@@ -28,11 +28,10 @@ body {
 .top-bar {
     position: absolute;
     inset: 0 0 auto 0;
-    height: 8.148%;
-    min-height: 88px;
+    height: 8.1vh;       /* Converted from percentages/pixels */
     background: #262f41;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 1vw; /* Converted corners */
+    border-bottom-right-radius: 1vw;
     z-index: 3;
 }
 
@@ -40,39 +39,37 @@ body {
     position: absolute;
     top: 50%; 
     transform: translateY(-50%); 
-    height: 5.0%;
-    min-height: 54px;
+    height: 5vh;         /* Removed min-height constraints */
     display: flex;
     align-items: center;
     justify-content: center;
     background: #323b4e;
-    border-radius: 47px;
+    border-radius: 2.5vw; /* Converted to vw for scaling */
     color: #ffe0e0;
     font-family: "Phoenicia", "Times New Roman", serif;
 }
 
 .left-pill {
-    left: 6.615%;
-    width: 10.365%;
-    min-width: 199px;
-    font-size: 36px;
-    letter-spacing: 3.96px;
+    left: 6.6vw;
+    width: 10.4vw;
+    font-size: 1.87vw;   /* Converted 36px */
+    letter-spacing: 0.2vw;
 }
 
 .right-pill {
-    right: 6.615%;
-    width: 13.333%;
-    min-width: 240px;
-    font-size: 24px;
-    gap: 10px;
+    right: 6.6vw;
+    width: 13.3vw;
+    font-size: 1.25vw;   /* Converted 24px */
+    gap: 0.5vw;
 }
 
 .nav-icon {
-    width: 24px;
+    width: 1.25vw;       /* Converted 24px */
     height: auto;
     display: block;
 }
 
+/* --- Main Content (Hero) --- */
 .hero {
     position: relative;
     z-index: 2;
@@ -81,10 +78,9 @@ body {
 
 .portrait {
     position: absolute;
-    left: 42.135%;
-    top: 22.778%;
-    width: 15.625%;
-    min-width: 300px;
+    left: 42.1vw;
+    top: 22.8vh;
+    width: 15.6vw;       /* Removed min-width 300px constraint */
     aspect-ratio: 1 / 1;
 }
 
@@ -98,15 +94,14 @@ body {
 
 .hero-copy {
     position: absolute;
-    left: 37.813%;
-    top: 15.278%;
-    max-width: 32.812%;
-    min-width: 280px;
+    left: 37.8vw;
+    top: 15.3vh;
+    width: 24.3vw;       /* Removed min-width constraints */
 }
 
 .hero-copy h1 {
     margin: 0;
-    font-size: 40px;
+    font-size: 2.08vw;   /* Converted 40px */
     line-height: 1.2;
     font-weight: 400;
     color: #ffe4c4;
@@ -115,33 +110,32 @@ body {
 
 .profile-button {
     position: absolute;
-    left: 45.469%;
-    top: 58.796%;
+    left: 45.4vw;
+    top: 58.8vh;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 8.646%;
-    min-width: 166px;
-    height: 2.87%;
-    min-height: 31px;
-    border-radius: 5px;
+    
+    width: 8.64vw;       /* Removed min-width */
+    height: 2.87vh;      /* Removed min-height */
+    
+    border-radius: 0.25vw; 
     background: #ffe4c4;
     color: #323948;
     text-decoration: none;
-    font-size: 24px;
-    font-family: "Times New Roman", serif;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     
-    /* Added for hover transition */
-    border: 2px solid transparent; 
+    font-size: 1.25vw;   /* Converted 24px */
+    font-family: "Times New Roman", serif;
+    box-shadow: 0 0.4vh 0.4vh rgba(0, 0, 0, 0.25);
+    
+    border: 0.1vw solid transparent; 
     transition: all 0.3s ease; 
 }
 
-/* Hover state placed OUTSIDE of media queries */
 .profile-button:hover {
     background: #323948;
     color: #ffe4c4;
-    border: 2px solid #ffe4c4;
+    border: 0.1vw solid #ffe4c4;
 }
 
 .waves-container {
