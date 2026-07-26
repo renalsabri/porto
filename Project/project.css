@@ -1,0 +1,238 @@
+/* --- Global Reset & Canvas --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: sans-serif;
+}
+
+.canvas {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: #1C263B;
+    overflow: hidden;
+}
+
+/* --- Typography --- */
+.title {
+    position: absolute;
+    width: 14.7vw;
+    height: 2.4vh;
+    left: 10.1vw;
+    top: 8.1vh;
+    
+    font-family: 'Phoenicia', serif;
+    font-weight: 400;
+    font-size: 2.5vw;
+    display: flex;
+    align-items: center;
+    color: #FFDFB9;
+   
+}
+
+.desc {
+    position: absolute;
+    width: 19.8vw;
+    height: 3.1vh;
+    left: 10.1vw;
+    top: 14vh;
+    
+    font-family: 'Crimson Text', serif;
+    font-weight: 400;
+    font-size: 1.25vw;
+    color: #FDECD9;
+    
+}
+
+/* --- Layout Containers --- */
+.left-bg-container {
+    position: absolute;
+    width: 40.3vw;
+    height: 71.2vh;
+    left: 8.5vw;
+    top: 19vh;
+    
+    background: #212836;
+    border-radius: 1.3vw;
+}
+
+.right-bg-container {
+    position: absolute;
+    width: 40vw;
+    height: 39.9vh;
+    left: 56.5vw;
+    top: 17.7vh;
+    
+    background: #212836;
+    border: 0.03vw solid #FFE4C4;
+    border-radius: 1.3vw;
+}
+
+/* --- Project Cards (Master Class) --- */
+.project-card {
+    position: absolute;
+    width: 33vw;
+    height: 58.8vh;
+    
+    background: #33373F;
+    border: 0.2vw solid #141C2B;
+    border-radius: 0.9vw;
+    box-shadow: 0 0.5vh 1vh rgba(0,0,0,0.3);
+}
+
+/* Card Content: URL Bar */
+.url-bar {
+    position: absolute;
+    width: 11.2vw;
+    height: 3vh;
+    left: 1.7vw;
+    top: 2.4vh;
+    
+    background: #24262C;
+    border-radius: 0.3vw;
+    display: flex;
+    align-items: center;
+    padding-left: 0.5vw;
+}
+
+.url-text {
+    font-family: 'Crimson Text', serif;
+    font-weight: 400;
+    font-size: 0.83vw;
+    color: #FFFFFF;
+}
+
+/* Card Content: Image Container */
+.project-img {
+    position: absolute;
+    width: 32.6vw;
+    height: 51.6vh;
+    left: 0.075vw;
+    top: 6.4vh;
+    
+    background-color: #555; /* Fallback if image doesn't load */
+    background-size: cover;
+    background-position: center;
+    border-radius: 0 0 0.7vw 0.7vw;
+}
+
+/* --- Individual Card Positions & Opacities --- */
+.card-3 {
+    left: 14.5vw;
+    top: 27.9vh;
+    opacity: 0.06;
+}
+
+.card-2 {
+    left: 12.2vw;
+    top: 23.9vh;
+    opacity: 0.2;
+}
+
+.card-1 {
+    left: 10.1vw;
+    top: 19.8vh;
+    opacity: 1; /* Fully visible front card */
+}
+
+/* Specific Image Assignments */
+.img-3 { background-image: url('Screenshot 2025-12-13 214508.png'); }
+.img-2 { background-image: url('Screenshot 2026-01-01 140718.png'); }
+.img-1 { background-image: url('Screenshot 2026-07-16 210150.png'); }
+
+/* --- Buttons --- */
+.nav-button {
+    position: absolute;
+    width: 2.6vw; /* Matches the ~50px Vector box in Figma */
+    height: 2.6vw;
+    top: 63.3vh;
+    
+    border-radius: 50%;
+    cursor: pointer;
+  
+}
+
+.nav-button svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.nav-left {
+    left: 70.5vw;
+}
+
+.nav-right {
+    left: 80.3vw;
+    transform: rotate(180deg);
+}
+
+/* --- Lines --- */
+.line {
+    position: absolute;
+    height: 0;
+}
+
+.line-1 {
+    width: 16.6vw;
+    left: 68.2vw;
+    top: 54.2vh;
+    border-top: 0.05vw solid #FFE4C4;
+}
+
+.line-2 {
+    width: 40vw;
+    left: 56.5vw;
+    top: 79.5vh;
+    border-top: 0.1vw dashed #FFE4C4;
+}
+
+/* --- Project Cards (Master Class) --- */
+.project-card {
+    position: absolute;
+    width: 33vw;
+    height: 58.8vh;
+    
+    background: #33373F;
+    border: 0.2vw solid #141C2B;
+    border-radius: 0.9vw;
+    box-shadow: 0 0.5vh 1vh rgba(0,0,0,0.3);
+    
+    /* ADD THIS LINE FOR SMOOTH ANIMATION */
+    transition: all 0.5s ease-in-out; 
+}
+
+/* --- Individual Card Positions & Opacities --- */
+.card-3 {
+    left: 14.5vw;
+    top: 27.9vh;
+    opacity: 0.06;
+    z-index: 1; /* ADDED */
+}
+
+.card-2 {
+    left: 12.2vw;
+    top: 23.9vh;
+    opacity: 0.2;
+    z-index: 2; /* ADDED */
+}
+
+.card-1 {
+    left: 10.1vw;
+    top: 19.8vh;
+    opacity: 1; /* Fully visible front card */
+    z-index: 3; /* ADDED */
+}
+
+a:link {
+  text-decoration: none;
+}

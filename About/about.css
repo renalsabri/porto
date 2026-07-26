@@ -1,0 +1,101 @@
+.vl {
+  width: 1px;
+  height: 80vh; 
+  position: absolute;
+  left: 50%;
+  margin-left: 0; 
+  top: 10vh;
+
+  background-image: repeating-linear-gradient(
+    to bottom,
+    #FFE4C4 0,           
+    #FFE4C4 3.333vh,     
+    transparent 3.333vh, 
+    transparent 6.666vh 
+  );
+}
+
+.rounded-rectangle {
+    position: absolute;
+    width: 80vh;
+    height: 80vh;
+    left: 10vw; 
+    top: 10vh; 
+    background: #e8d9c6;
+    border-radius: 45% 10%; 
+}
+
+/* Master class for all three info boxes */
+.info-box {
+    position: absolute;
+    width: 20vw;         /* Converted 389px to viewport width */
+    height: 11vh;        /* Converted 120px to viewport height */
+    left: 65vw;          /* Converted 1327px to viewport width */
+    
+    background: #e8d9c6;
+    border-radius: 5.5vh; /* Converted 60px curve to viewport height */
+
+    /* Automatically centers the text perfectly */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Phoenicia', sans-serif;
+    font-weight: 400;
+    font-size: 2.5vw;    /* Converted 48px to viewport width */
+    color: #d9bd9d;
+    
+    cursor: pointer;
+}
+
+/* Individual top positions for each box */
+.box-1 {
+    top: 25.6vh;         /* Converted 277px */
+}
+
+.box-1:hover {
+    background: #182031;        /* Converted 277px */
+}
+
+.box-2 {
+    top: 48vh;           /* Converted 518px */
+}
+.box-2:hover {
+    background: #182031;        /* Converted 277px */
+}
+
+.box-3 {
+    top: 70vh;           /* Converted 758px */
+}
+.box-3:hover {
+    background: #182031;        /* Converted 277px */
+}
+
+/* Ellipse 5 (The dark background circle) */
+.ellipse-bg {
+    position: absolute;
+    width: 15vw;         /* Converted 288px */
+    height: 30vh;      /* Converted 294px */
+    left: 5.2vw;         /* Converted 119px */
+    top: 11.6vh;           /* Converted 130px */
+    
+    background: #182031;
+    border-radius: 80%;  /* Makes it a perfect circle */
+}
+
+/* Ellipse 2 (The profile picture) */
+.ellipse-pp {
+    box-sizing: border-box;
+    position: absolute;
+    width: 9.4vw;        /* Converted 181px */
+    height: 20vh;        /* Converted 184px */
+    left: 8.9vw;         /* Converted 172px */
+    top: 16.4vh;         /* Converted 196px */
+    
+    background: url('../Img/pp.jpg');
+    background-size: cover;
+    background-position: center;
+    border: 0.1vh solid #333333;
+    border-radius: 50%;  /* Makes it a perfect circle */
+}
+

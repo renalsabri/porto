@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link rel="stylesheet" href="project.css"> 
+</head>
+<body>
+    <div class="canvas">
+        
+        <!-- Headers -->
+        <div class="title">PROJECT</div>
+        <div class="desc">A collection of my recent work</div>
+
+        <!-- Background Container Left -->
+        <div class="left-bg-container"></div>
+
+        <!-- Project Cards (Stacked Back to Front) -->
+        <!-- Third Project (Back) -->
+        <div class="project-card card-3">
+            <div class="url-bar">
+                <span class="url-text">Medishift</span>
+            </div>
+            <div class="project-img img-3"></div>
+        </div>
+
+        <!-- Second Project (Middle) -->
+        <div class="project-card card-2">
+            <div class="url-bar">
+                <a href="https://github.com/renalsabri/KomikO" target="_blank" rel="noopener noreferrer">
+                <span class="url-text">github.com/renalsabri/KomikO</span>
+                </a>
+            </div>
+            <div class="project-img img-2"></div>
+        </div>
+
+        <!-- First Project (Front) -->
+        <div class="project-card card-1">
+            <div class="url-bar">
+                <a href="https://ecolert-oplk.vercel.app/" target="_blank" rel="noopener noreferrer">
+                    <span class="url-text">https://ecolert-oplk.vercel.app/</span>
+                </a>
+            </div>
+            <div class="project-img img-1"></div>
+        </div>
+
+        <!-- Right Side Container & Elements -->
+        <div class="right-bg-container"></div>
+        
+        <!-- Navigation Buttons -->
+        <div class="nav-button nav-left">
+            <svg viewBox="0 0 23 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.9961 38.5C19.3285 38.5 18.6904 38.2409 18.2217 37.7832L1.22949 21.1777C0.761224 20.7202 0.5 20.1018 0.5 19.46C0.500087 18.8182 0.761302 18.2007 1.22949 17.7432L18.2178 1.15234C18.6918 0.724022 19.3186 0.488117 19.9688 0.5C20.6204 0.511972 21.2399 0.770629 21.6973 1.21777C22.1543 1.66477 22.4135 2.26588 22.4248 2.89258C22.436 3.5159 22.2016 4.1218 21.7656 4.58301C13.4145 12.7477 13.4158 26.1852 21.7705 34.3477C22.2388 34.8052 22.5 35.4236 22.5 36.0654C22.5 36.7073 22.2388 37.3256 21.7705 37.7832C21.3018 38.2408 20.6637 38.5 19.9961 38.5Z" fill="#FFE4C4" stroke="#081227"/>
+            </svg>
+        </div>
+        <div class="nav-button nav-right">
+            <svg viewBox="0 0 23 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.9961 38.5C19.3285 38.5 18.6904 38.2409 18.2217 37.7832L1.22949 21.1777C0.761224 20.7202 0.5 20.1018 0.5 19.46C0.500087 18.8182 0.761302 18.2007 1.22949 17.7432L18.2178 1.15234C18.6918 0.724022 19.3186 0.488117 19.9688 0.5C20.6204 0.511972 21.2399 0.770629 21.6973 1.21777C22.1543 1.66477 22.4135 2.26588 22.4248 2.89258C22.436 3.5159 22.2016 4.1218 21.7656 4.58301C13.4145 12.7477 13.4158 26.1852 21.7705 34.3477C22.2388 34.8052 22.5 35.4236 22.5 36.0654C22.5 36.7073 22.2388 37.3256 21.7705 37.7832C21.3018 38.2408 20.6637 38.5 19.9961 38.5Z" fill="#FFE4C4" stroke="#081227"/>
+            </svg>
+        </div>
+
+        <!-- Decorative Lines -->
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+
+        <script>
+            // Select all cards and buttons
+            const cards = document.querySelectorAll('.project-card');
+            const btnLeft = document.querySelector('.nav-left');
+            const btnRight = document.querySelector('.nav-right');
+
+            // This array represents the DOM order of your cards (card-3 is first in HTML, card-1 is last)
+            let positions = ['card-3', 'card-2', 'card-1']; 
+
+            // Function to re-assign classes based on the array
+            function updateCards() {
+                cards.forEach((card, index) => {
+                    // Strip existing position classes
+                    card.classList.remove('card-1', 'card-2', 'card-3');
+                    // Apply the newly shifted position class
+                    card.classList.add(positions[index]);
+                });
+            }
+
+            // Click Right (Next Project)
+            btnRight.addEventListener('click', () => {
+                // Moves the front card to the back, pulling others forward
+                positions.push(positions.shift());
+                updateCards();
+            });
+
+            // Click Left (Previous Project)
+            btnLeft.addEventListener('click', () => {
+                // Moves the back card to the front, pushing others backward
+                positions.unshift(positions.pop());
+                updateCards();
+            });
+        </script>
+
+    </div>
+</body>
+</html>

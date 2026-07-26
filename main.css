@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #1a1a1a;
+    font-family: Arial, sans-serif;
+   
+}
+
+.canvas {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
+    background: #323948;
+    overflow: hidden;
+    color: #ffffff;
+    transform-origin: top left;
+}
+
+.top-bar {
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 8.148%;
+    min-height: 88px;
+    background: #262f41;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    z-index: 3;
+}
+
+.nav-pill {
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%); 
+    height: 5.0%;
+    min-height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #323b4e;
+    border-radius: 47px;
+    color: #ffe0e0;
+    font-family: "Phoenicia", "Times New Roman", serif;
+}
+
+.left-pill {
+    left: 6.615%;
+    width: 10.365%;
+    min-width: 199px;
+    font-size: 36px;
+    letter-spacing: 3.96px;
+}
+
+.right-pill {
+    right: 6.615%;
+    width: 13.333%;
+    min-width: 240px;
+    font-size: 24px;
+    gap: 10px;
+}
+
+.nav-icon {
+    width: 24px;
+    height: auto;
+    display: block;
+}
+
+.hero {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+}
+
+.portrait {
+    position: absolute;
+    left: 42.135%;
+    top: 22.778%;
+    width: 15.625%;
+    min-width: 300px;
+    aspect-ratio: 1 / 1;
+}
+
+.portrait img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.hero-copy {
+    position: absolute;
+    left: 37.813%;
+    top: 15.278%;
+    max-width: 32.812%;
+    min-width: 280px;
+}
+
+.hero-copy h1 {
+    margin: 0;
+    font-size: 40px;
+    line-height: 1.2;
+    font-weight: 400;
+    color: #ffe4c4;
+    font-family: "Times New Roman", serif;
+}
+
+.profile-button {
+    position: absolute;
+    left: 45.469%;
+    top: 58.796%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 8.646%;
+    min-width: 166px;
+    height: 2.87%;
+    min-height: 31px;
+    border-radius: 5px;
+    background: #ffe4c4;
+    color: #323948;
+    text-decoration: none;
+    font-size: 24px;
+    font-family: "Times New Roman", serif;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    
+    /* Added for hover transition */
+    border: 2px solid transparent; 
+    transition: all 0.3s ease; 
+}
+
+/* Hover state placed OUTSIDE of media queries */
+.profile-button:hover {
+    background: #323948;
+    color: #ffe4c4;
+    border: 2px solid #ffe4c4;
+}
+
+.waves-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.wave {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.wave-back {
+    bottom: 0;
+}
+
+.wave-middle {
+    bottom: 0;
+}
+
+.wave-front {
+    bottom: 0;
+}
+
+.wave-svg-layer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 72%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.wave-svg-layer svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.wave-band {
+    will-change: transform;
+}
+
+.wave-band-1 {
+    opacity: 0.95;
+}
+
+.wave-band-2 {
+    opacity: 0.92;
+}
+
+.wave-band-3 {
+    opacity: 0.98;
+}
+
+@media (max-width: 1200px) {
+    .left-pill {
+        left: 24px;
+        width: 199px;
+        min-width: auto;
+    }
+
+    .right-pill {
+        right: 24px;
+        width: 256px;
+        min-width: auto;
+    }
+
+    .hero-copy {
+        left: 48px;
+        top: 140px;
+        max-width: 480px;
+    }
+
+    .portrait {
+        left: auto;
+        right: 96px;
+        width: 300px;
+        min-width: auto;
+    }
+
+    .profile-button {
+        left: 48px;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero-copy {
+        left: 24px;
+        top: 120px;
+        max-width: 320px;
+    }
+
+    .hero-copy h1 {
+        font-size: 32px;
+    }
+
+    .portrait {
+        width: 220px;
+        right: 24px;
+        top: 180px;
+    }
+
+    .profile-button {
+        left: 24px;
+        top: 560px;
+    }
+}
