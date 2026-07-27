@@ -351,3 +351,26 @@ body {
 }
 
 
+.home-ascii-stars {
+    position: absolute;
+    /* Anchors the center of the text block to the dead center of the screen */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    
+    z-index: 0; 
+    
+    font-family: monospace;
+    color: rgba(255, 255, 255, 0.2); 
+    white-space: pre; 
+    pointer-events: none; 
+    
+    /* Centering the text inside its own block */
+    text-align: center;
+    
+    /* --- The Stretching Logic --- */
+    /* Adjust these numbers up or down to stretch the stars exactly how you like */
+    font-size: 1.2vw;        /* Stretches the stars horizontally */
+    letter-spacing: 0.4vw;   /* Adds extra physical space between each star */
+    line-height: 2.8vh;      /* Stretches the stars vertically */
+}
