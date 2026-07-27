@@ -4,9 +4,9 @@ if (waveBands.length) {
   const width = 1920;
   const height = 1000;
   const configs = [
-    { baseY: 620, amplitude: 42, frequency: 0.012, speed: 0.95, phase: 0.0 },
-    { baseY: 680, amplitude: 30, frequency: 0.010, speed: 0.78, phase: 1.1 },
-    { baseY: 760, amplitude: 24, frequency: 0.014, speed: 1.15, phase: 1.8 }
+    { baseY: 620, amplitude: 80, frequency: 0.012, speed: 0.95, phase: 0.0 },
+    { baseY: 680, amplitude: 50, frequency: 0.010, speed: 0.78, phase: 1.1 },
+    { baseY: 760, amplitude: 40, frequency: 0.014, speed: 1.15, phase: 1.8 }
   ];
 
   function buildWavePath(config, time) {

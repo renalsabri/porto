@@ -3,18 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Porto Layout</title>
+    <title>Portfolio</title>
+    
+    <!-- Consolidated Stylesheets -->
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="About/about.css">
+    <link rel="stylesheet" href="Project/project.css">
+    
+    <style>
+        /* Smooth scrolling behavior and section constraint rules */
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            margin: 0;
+            overflow-x: hidden;
+            overflow-y: auto;
+            background-color: #1a1a1a;
+        }
+        section {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
-    <div class="canvas">
-    <header class="top-bar">
-        <div class="nav-pill left-pill" id="real-time-clock">13.00</div>
-        <div class="nav-pill right-pill">
-            <img class="nav-icon" src="https://www.figma.com/api/mcp/asset/304946cf-f0cd-47aa-8e61-20d28380114b" alt="">
-            <span>Connects</span>
-        </div>
-    </header>
+
+    <!-- 1. Home Section -->
+    <section id="home" class="canvas">
+        <header class="top-bar">
+            <div class="nav-pill left-pill" id="real-time-clock">13.00</div>
+            <div class="nav-pill right-pill">
+                <img class="nav-icon" src="https://www.figma.com/api/mcp/asset/304946cf-f0cd-47aa-8e61-20d28380114b" alt="">
+                <span>Connect</span>
+            </div>
+        </header>
 
         <main class="hero">
             <div class="portrait">
@@ -25,7 +50,8 @@
                 <h1>Hi! I’m Reynaldi Aulia Sabri</h1>
             </div>
 
-            <a class="profile-button" href="About/about.html">Profile </a>
+            <!-- Anchor link directed to the About section -->
+            <a class="profile-button" href="../About/about.html">Profile</a>
         </main>
 
         <div class="waves-container">
@@ -37,7 +63,6 @@
                 </svg>
             </div>
         </div>
-    </div>
     <script src="wave-animation.js"></script>
 </body>
 </html>
