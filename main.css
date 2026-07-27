@@ -69,6 +69,26 @@ body {
     display: block;
 }
 
+.nav-logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Centers the logo perfectly */
+    
+    width: 8.5vw;  /* Scaled proportionately to your 1920x1080 design */
+    height: 4.1vh; 
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-logo svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
 /* --- Main Content (Hero) --- */
 .hero {
     position: relative;
@@ -254,3 +274,7 @@ body {
         top: 560px;
     }
 }
+
+
+
+

@@ -79,7 +79,7 @@
     left: 5.2vw;         /* Converted 119px */
     top: 11.6vh;           /* Converted 130px */
     
-    background: #182031;
+    background: linear-gradient(to bottom, #182031 65%, #1C263B);
     border-radius: 80%;  /* Makes it a perfect circle */
 }
 
@@ -89,7 +89,7 @@
     position: absolute;
     width: 9.4vw;        /* Converted 181px */
     height: 20vh;        /* Converted 184px */
-    left: 8.9vw;         /* Converted 172px */
+    left: 8vw;         /* Converted 172px */
     top: 16.4vh;         /* Converted 196px */
     
     background-image: url('../Img/pp.jpg');
