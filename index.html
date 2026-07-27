@@ -3,57 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Portfolio - Reynaldi Aulia Sabri</title>
     
-    <!-- Consolidated Stylesheets -->
+    <!-- Link all of your separate CSS files here -->
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="About/about.css">
     <link rel="stylesheet" href="Project/project.css">
     
     <style>
-        /* Smooth scrolling behavior and section constraint rules */
+        /* Force the HTML to allow vertical scrolling */
         html {
             scroll-behavior: smooth;
+            overflow-y: auto !important; 
+            height: auto !important;
         }
+        
         body {
             margin: 0;
-            overflow-x: hidden;
-            overflow-y: auto;
             background-color: #1a1a1a;
+            
+            /* Overrides the flexbox rules hiding inside project.css */
+            display: block !important; 
+            
+            /* Forces the body to expand downwards and allow scrolling */
+            height: auto !important; 
+            min-height: 100vh;
+            
+            overflow-x: hidden !important; /* Prevents left/right scrolling */
+            overflow-y: auto !important;   /* Allows up/down scrolling */
         }
+
+        /* Forces every section to take up exactly one full monitor screen */
         section {
             position: relative;
             width: 100vw;
             height: 100vh;
-            overflow: hidden;
+            display: block;
+            overflow: hidden; /* Keeps elements inside their specific section */
         }
     </style>
 </head>
 <body>
 
-    <!-- 1. Home Section -->
+    <!-- ==========================================
+         SECTION 1: HOME (Originally index.html)
+    =========================================== -->
     <section id="home" class="canvas">
         <header class="top-bar">
             <div class="nav-pill left-pill" id="real-time-clock">13.00</div>
             <div class="nav-pill right-pill">
-                <img class="nav-icon" src="https://www.figma.com/api/mcp/asset/304946cf-f0cd-47aa-8e61-20d28380114b" alt="">
+                <!-- Replace the broken SVG with this image tag -->
+                <img class="nav-icon" src="https://www.figma.com/api/mcp/asset/304946cf-f0cd-47aa-8e61-20d28380114b" alt="Connect Icon">
                 <span>Connect</span>
             </div>
         </header>
 
         <main class="hero">
             <div class="portrait">
-                <img src="https://www.figma.com/api/mcp/asset/e092e4f6-257d-4ea7-aea4-d615781f5176" alt="Portrait illustration">
+                <img src="Img/pp.jpg" alt="Portrait illustration">
             </div>
 
             <div class="hero-copy">
                 <h1>Hi! I’m Reynaldi Aulia Sabri</h1>
             </div>
 
-            <!-- Anchor link directed to the About section -->
-            <a class="profile-button" href="../About/about.html">Profile</a>
+            <!-- This link now scrolls down to the #about section -->
+            <a class="profile-button" href="#about">Profile</a>
         </main>
 
+        <!-- Bottom Waves -->
         <div class="waves-container">
             <div class="wave-svg-layer">
                 <svg viewBox="0 0 1920 1000" preserveAspectRatio="none" aria-hidden="true">
@@ -63,6 +81,105 @@
                 </svg>
             </div>
         </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 2: ABOUT (Originally about.html)
+    =========================================== -->
+    <section id="about" style="background-color: #182031;">
+        <div class="vl"></div>
+        <div class="rounded-rectangle"></div>
+
+        <div class="ellipse-bg"></div>
+        <div class="ellipse-pp"></div>
+
+        <!-- This link now scrolls down to the #project section -->
+        <a class="info-box box-1" href="#project">PROject</a>
+        <a class="info-box box-2" href="#skills">Skills</a>
+        <a class="info-box box-3" href="#sudoku">???</a>
+    </section>
+
+    <!-- ==========================================
+         SECTION 3: PROJECT (Originally project.html)
+    =========================================== -->
+    <section id="project" style="background: #1C263B;">
+        <div class="title">PROJECT</div>
+        <div class="desc">A collection of my recent work</div>
+
+        <div class="left-bg-container"></div>
+
+        <!-- Project Cards -->
+        <div class="project-card card-3">
+            <div class="url-bar"><span class="url-text">Medishift</span></div>
+            <div class="project-img img-3"></div>
+        </div>
+
+        <div class="project-card card-2">
+            <div class="url-bar"><span class="url-text">github.com/renalsabri/KomikO</span></div>
+            <div class="project-img img-2"></div>
+        </div>
+
+        <div class="project-card card-1">
+            <div class="url-bar"><span class="url-text">https://ecolert-oplk.vercel.app/</span></div>
+            <div class="project-img img-1"></div>
+        </div>
+
+        <div class="right-bg-container"></div>
+        
+        <!-- Navigation Arrows -->
+        <div class="nav-button nav-left">
+            <svg viewBox="0 0 23 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.9961 38.5C19.3285 38.5 18.6904 38.2409 18.2217 37.7832L1.22949 21.1777C0.761224 20.7202 0.5 20.1018 0.5 19.46C0.500087 18.8182 0.761302 18.2007 1.22949 17.7432L18.2178 1.15234C18.6918 0.724022 19.3186 0.488117 19.9688 0.5C20.6204 0.511972 21.2399 0.770629 21.6973 1.21777C22.1543 1.66477 22.4135 2.26588 22.4248 2.89258C22.436 3.5159 22.2016 4.1218 21.7656 4.58301C13.4145 12.7477 13.4158 26.1852 21.7705 34.3477C22.2388 34.8052 22.5 35.4236 22.5 36.0654C22.5 36.7073 22.2388 37.3256 21.7705 37.7832C21.3018 38.2408 20.6637 38.5 19.9961 38.5Z" fill="#FFE4C4" stroke="#081227"/>
+            </svg>
+        </div>
+        <div class="nav-button nav-right">
+            <svg viewBox="0 0 23 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.9961 38.5C19.3285 38.5 18.6904 38.2409 18.2217 37.7832L1.22949 21.1777C0.761224 20.7202 0.5 20.1018 0.5 19.46C0.500087 18.8182 0.761302 18.2007 1.22949 17.7432L18.2178 1.15234C18.6918 0.724022 19.3186 0.488117 19.9688 0.5C20.6204 0.511972 21.2399 0.770629 21.6973 1.21777C22.1543 1.66477 22.4135 2.26588 22.4248 2.89258C22.436 3.5159 22.2016 4.1218 21.7656 4.58301C13.4145 12.7477 13.4158 26.1852 21.7705 34.3477C22.2388 34.8052 22.5 35.4236 22.5 36.0654C22.5 36.7073 22.2388 37.3256 21.7705 37.7832C21.3018 38.2408 20.6637 38.5 19.9961 38.5Z" fill="#FFE4C4" stroke="#081227"/>
+            </svg>
+        </div>
+
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+    </section>
+
+    <!-- Unified JavaScript -->
     <script src="wave-animation.js"></script>
+    <script>
+        // Project Card Rotation Logic
+        const cards = document.querySelectorAll('.project-card');
+        const btnLeft = document.querySelector('.nav-left');
+        const btnRight = document.querySelector('.nav-right');
+        let positions = ['card-3', 'card-2', 'card-1']; 
+
+        function updateCards() {
+            cards.forEach((card, index) => {
+                card.classList.remove('card-1', 'card-2', 'card-3');
+                card.classList.add(positions[index]);
+            });
+        }
+
+        btnRight.addEventListener('click', () => {
+            positions.push(positions.shift());
+            updateCards();
+        });
+
+        btnLeft.addEventListener('click', () => {
+            positions.unshift(positions.pop());
+            updateCards();
+        });
+
+        // Real-time Clock Logic
+        function updateClock() {
+            const clockElement = document.getElementById('real-time-clock');
+            if (clockElement) {
+                const now = new Date();
+                const hours = String(now.getHours()).padStart(2, '0');
+                const minutes = String(now.getMinutes()).padStart(2, '0');
+                clockElement.textContent = `${hours}.${minutes}`;
+            }
+        }
+        updateClock();
+        setInterval(updateClock, 1000);
+    </script>
 </body>
 </html>

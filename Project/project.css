@@ -145,9 +145,9 @@ body {
 }
 
 /* Specific Image Assignments */
-.img-3 { background-image: url('Screenshot 2025-12-13 214508.png'); }
-.img-2 { background-image: url('Screenshot 2026-01-01 140718.png'); }
-.img-1 { background-image: url('Screenshot 2026-07-16 210150.png'); }
+.img-3 { background-image: url('../Screenshot 2025-12-13 214508.png'); }
+.img-2 { background-image: url('../Screenshot 2026-01-01 140718.png'); }
+.img-1 { background-image: url('../Screenshot 2026-07-16 210150.png'); }
 
 /* --- Buttons --- */
 .nav-button {
