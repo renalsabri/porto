@@ -114,9 +114,10 @@ body {
 
 .hero-copy {
     position: absolute;
-    left: 37.8vw;
+    left: 49.9vw;
     top: 15.3vh;
-    width: 24.3vw;       /* Removed min-width constraints */
+    transform: translateX(-50%);
+    width: fit-content;   /* Removed max-width constraint */       /* Removed min-width constraints */
 }
 
 .hero-copy h1 {
@@ -125,7 +126,9 @@ body {
     line-height: 1.2;
     font-weight: 400;
     color: #ffe4c4;
-    font-family: "Times New Roman", serif;
+    font-family: "Phoenicia", serif;
+    white-space: nowrap;
+    text-align: center;
 }
 
 .profile-button {
@@ -275,6 +278,76 @@ body {
     }
 }
 
+.nav-center-group {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    gap: 1vw; /* Space between the three pills */
+    align-items: center;
+    justify-content: center;
+}
 
+/* --- Expandable Pill Shared Styles --- */
+.nav-expandable-pill {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.28vw;
+    gap: 0.52vw;
+    
+    /* Default collapsed state */
+    width: 2.8vw;
+    height: 2.8vw;
+    
+    background: #323B4E;
+    border-radius: 2.45vw;
+    text-decoration: none;
+    overflow: hidden;
+    
+    transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1), background 0.3s ease;
+}
+
+.nav-expandable-pill:hover {
+    width: 12.5vw; /* Smoothly expands. Adjust this if "Projects" gets cut off */
+    background: #3e4961;
+}
+
+/* --- The SVG Icons Inside --- */
+.nav-pill-icon {
+    width: 2.24vw;
+    height: 2.24vw;
+    padding: 0.4vw; 
+    box-sizing: border-box; 
+    display: block;
+    flex-shrink: 0;
+}
+
+/* --- The Text Inside --- */
+.nav-pill-text {
+    font-family: 'Phoenicia', serif; 
+    font-weight: 400;
+    font-size: 1.25vw;
+    color: #FFFFFF;
+    
+    width: 100%;
+    text-align: center;
+    padding-right: 2.76vw;
+
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(-0.5vw);
+    transition: all 0.3s ease-in-out;
+    transition-delay: 0s; 
+}
+
+.nav-expandable-pill:hover .nav-pill-text {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.15s;
+}
 
 
