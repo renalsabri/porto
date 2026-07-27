@@ -1,0 +1,24 @@
+{
+  "name": "porto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "wave-animation.js",
+  "scripts": {
+    "dev": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/renalsabri/porto.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/renalsabri/porto/issues"
+  },
+  "homepage": "https://github.com/renalsabri/porto#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
