@@ -26,7 +26,7 @@ body {
 }
 
 .top-bar {
-    position: absolute;
+    position: fixed;
     inset: 0 0 auto 0;
     height: 8.1vh;       /* Converted from percentages/pixels */
     background: #262f41;
